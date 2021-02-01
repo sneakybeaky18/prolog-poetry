@@ -1,0 +1,8 @@
+import codecs
+
+filename = "words.pl"
+f = codecs.open(filename, 'r', 'utf-8')
+u = f.read()   # now the contents have been transformed to a Unicode string
+output = "words.pl"
+out = codecs.open(output, 'w', 'cp1251')
+out.write(u)   # and now the contents have been output as UTF-8
